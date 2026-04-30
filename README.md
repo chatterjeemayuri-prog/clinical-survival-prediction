@@ -61,6 +61,12 @@ These methods are widely used in clinical research and epidemiology.
 - R
 - survival package
 
+## Results
+
+### Kaplan-Meier Survival Curve
+
+![Kaplan-Meier Curve](km_plot.png)
+
 ## Author
 Mayuri Chatterjee
 ## Tools Used
