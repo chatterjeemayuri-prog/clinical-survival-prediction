@@ -161,18 +161,15 @@ Machine learning survival methods are increasingly being used in biostatistics a
 
 The analysis was developed using reproducible workflows in R with script-based implementation and version-controlled project organization through GitHub.
 
-# Tools and Technologies
+# Tools & Technologies
 
 ## Programming Language
 - R
 
 ## Packages
-- `survival`
-- `survminer`
-- `glmnet`
-- `randomForestSRC`
-- `pec`
-- `caret`
+- survival
+- glmnet
+- randomForestSRC
 
 ## Reproducibility
 - GitHub version control
