@@ -126,6 +126,41 @@ These approaches are widely applicable in:
 - clinical prediction modelling
 - precision medicine research
 
+# Methodological Considerations
+
+This project highlights the importance of combining statistical inference with predictive modelling in clinical survival analysis.
+
+Classical survival models such as the Cox proportional hazards model provide interpretable estimates of covariate effects and remain important for understanding clinically meaningful associations. However, machine learning survival methods can improve predictive flexibility by capturing non-linear relationships and interactions that may not be adequately represented in traditional models.
+
+The project therefore compares interpretable statistical approaches with more flexible predictive methods while emphasizing validation and reproducibility.
+
+# Limitations
+
+Several limitations should be considered:
+
+- The dataset used is relatively small and intended primarily for methodological demonstration.
+- External validation was not performed.
+- The analysis uses a limited number of clinical covariates.
+- More advanced approaches such as deep learning survival models were not explored.
+
+Future work could extend the analysis to larger real-world clinical datasets and incorporate additional predictors, longitudinal measurements, and explainability methods.
+
+# Why Survival Machine Learning Matters
+
+Predictive modelling for time-to-event outcomes plays an important role in clinical research and healthcare analytics.
+
+Accurate survival prediction can support:
+- risk stratification,
+- treatment planning,
+- clinical decision-making,
+- identification of high-risk patient groups.
+
+Machine learning survival methods are increasingly being used in biostatistics and precision medicine research because they allow more flexible modelling of complex clinical relationships while maintaining predictive performance.
+
+# Reproducibility
+
+The analysis was developed using reproducible workflows in R with script-based implementation and version-controlled project organization through GitHub.
+
 # Tools and Technologies
 
 ## Programming Language
