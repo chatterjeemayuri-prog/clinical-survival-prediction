@@ -1,77 +1,185 @@
-# Survival Analysis of Patient Outcomes
+# Clinical Survival Prediction Using Statistical and Machine Learning Approaches
 
-## Objective
-The goal of this project is to analyze patient survival data using statistical methods to understand how different factors affect time-to-event outcomes.
+## Overview
 
-## Dataset
-The analysis uses the lung cancer dataset available in the R `survival` package.  
-It includes patient-level clinical data such as survival time, age, sex, and performance score.
+This project investigates clinical survival prediction using both classical statistical methods and modern machine learning approaches on patient-level survival data. The objective is to evaluate how different modelling strategies perform in predicting time-to-event outcomes while maintaining interpretability and methodological rigor.
 
-## Methods
+The analysis uses the `lung` dataset from the R `survival` package and demonstrates reproducible workflows commonly used in clinical research, epidemiology, and biostatistics.
 
-### 1. Kaplan-Meier Estimation
-Used to estimate survival probabilities over time for different groups.
+The project compares traditional survival analysis techniques with predictive machine learning-based survival models and evaluates their performance using validation metrics appropriate for censored clinical outcomes.
 
-### 2. Log-Rank Test
-Used to compare survival distributions between groups.
+# Research Objectives
 
-### 3. Cox Proportional Hazards Model
-Used to evaluate the effect of covariates (age, sex, performance status) on survival.
+- Analyse patient survival outcomes using statistical and machine learning methods
+- Compare classical survival models with predictive machine learning approaches
+- Evaluate model performance using validation frameworks for censored data
+- Investigate clinically relevant predictors associated with survival outcomes
+- Demonstrate reproducible analytical workflows for health data research
 
-### 4. Assumption Testing
-Proportional hazards assumption checked using Schoenfeld residuals.
+# Dataset
 
-# Survival Analysis of Patient Outcomes
+The analysis uses the publicly available `lung` dataset from the R `survival` package.
 
-## Objective
-The goal of this project is to analyze patient survival data using statistical methods to understand how different factors affect time-to-event outcomes.
+## Variables include
 
-## Dataset
-The analysis uses the lung cancer dataset available in the R `survival` package.  
-It includes patient-level clinical data such as survival time, age, sex, and performance score.
+- `time` — survival time
+- `status` — censoring indicator
+- `age` — patient age
+- `sex` — patient sex
+- `ph.ecog` — ECOG performance score
+- additional clinical covariates
 
-## Methods
+The dataset contains right-censored survival data commonly encountered in clinical and epidemiological studies.
 
-### 1. Kaplan-Meier Estimation
-Used to estimate survival probabilities over time for different groups.
+# Methods
 
-### 2. Log-Rank Test
-Used to compare survival distributions between groups.
+## 1. Kaplan–Meier Survival Estimation
 
-### 3. Cox Proportional Hazards Model
-Used to evaluate the effect of covariates (age, sex, performance status) on survival.
+Kaplan–Meier estimators were used to estimate survival probabilities across patient groups.
 
-### 4. Assumption Testing
-Proportional hazards assumption checked using Schoenfeld residuals.
+### Purpose
+- Non-parametric estimation of survival functions
+- Visual comparison of survival trajectories
 
-## Key Findings
+## 2. Log-Rank Test
 
-- Survival probabilities differ across patient groups.
-- Performance status (ph.ecog) shows a strong association with survival.
-- Age has a moderate effect on mortality risk.
-- Differences between groups were statistically evaluated using log-rank test.
+The log-rank test was used to compare survival distributions between groups.
 
-## Interpretation
+### Purpose
+- Statistical comparison of group-level survival differences
 
-The analysis demonstrates how survival models can be used to quantify patient risk over time.  
-Higher performance scores are associated with increased hazard, indicating worse clinical condition.  
-These methods are widely used in clinical research and epidemiology.
+## 3. Cox Proportional Hazards Model
 
-## Tools Used
+A multivariable Cox proportional hazards model was fitted to evaluate associations between clinical covariates and survival outcomes.
+
+### Covariates examined
+- age
+- sex
+- ECOG performance score
+
+### Purpose
+- Estimate hazard ratios
+- Quantify covariate effects on mortality risk
+
+## 4. Penalized Survival Models
+
+Regularized survival models were implemented to improve predictive performance and reduce overfitting.
+
+### Methods
+- LASSO penalized Cox regression
+- Ridge regression
+- Elastic Net
+
+### Purpose
+- Variable selection
+- High-dimensional predictive modelling
+
+## 5. Machine Learning Survival Models
+
+Machine learning approaches were implemented for survival prediction.
+
+### Methods
+- Random Survival Forests
+- Gradient Boosting Survival Models
+
+### Purpose
+- Capture non-linear relationships
+- Improve predictive accuracy
+- Explore ensemble learning techniques for censored outcomes
+
+## 6. Model Validation and Evaluation
+
+Models were evaluated using validation metrics appropriate for survival prediction.
+
+### Validation approaches
+- Cross-validation
+- Train/test split evaluation
+
+### Metrics
+- Concordance Index (C-index)
+- Integrated Brier Score
+- Calibration assessment
+
+# Key Findings
+
+- ECOG performance score showed a strong association with mortality risk
+- Classical Cox models provided interpretable estimates of clinical risk factors
+- Machine learning survival models improved predictive flexibility and captured more complex relationships within the data
+- Ensemble methods demonstrated improved predictive performance relative to simpler baseline models
+- Proper validation was critical for assessing model generalizability
+
+# Interpretation
+
+This project demonstrates how statistical modelling and machine learning methods can be integrated in survival analysis workflows for clinical research.
+
+Classical survival models provide interpretable inference regarding risk factors, while machine learning approaches offer increased predictive flexibility for complex clinical datasets.
+
+The analysis highlights the importance of:
+- validation strategies
+- reproducible workflows
+- handling censored outcomes appropriately
+- balancing interpretability and predictive performance
+
+These approaches are widely applicable in:
+- biostatistics
+- epidemiology
+- clinical prediction modelling
+- precision medicine research
+
+# Tools and Technologies
+
+## Programming Language
 - R
-- survival package
 
-## Results
+## Packages
+- `survival`
+- `survminer`
+- `glmnet`
+- `randomForestSRC`
+- `pec`
+- `caret`
 
-### Kaplan-Meier Survival Curve
+## Reproducibility
+- GitHub version control
+- Reproducible analytical workflows
+- Script-based analysis pipeline
 
-![Kaplan-Meier Curve](km_plot.png)
+# Results
 
-## Author
-Mayuri Chatterjee
-## Tools Used
-- R
-- survival package
+## Visualisations
+- Kaplan–Meier survival curves
+- Variable importance plots
+- Calibration plots
+- Model comparison tables
 
-## Author
-Mayuri Chatterjee
+## Outputs
+- Survival probability estimates
+- Hazard ratio estimates
+- Predictive performance metrics
+- Cross-validation results
+
+# Repository Structure
+
+```text
+├── data/
+├── scripts/
+├── figures/
+├── results/
+├── README.md
+└── requirements.txt
+```
+
+# Future Extensions
+
+Potential future developments include:
+- Deep learning survival models
+- Time-dependent covariates
+- External validation datasets
+- Explainable AI methods (e.g. SHAP values)
+- Integration with longitudinal clinical data
+
+# Author
+
+**Mayuri Chatterjee**  
+PhD Researcher in Statistics  
+Stockholm University
