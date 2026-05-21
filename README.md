@@ -60,6 +60,14 @@ Variables include:
 
 ![Variable Importance](figures/variable_importance.png)
 
+## Limitations
+
+- The dataset is relatively small and intended primarily for methodological illustration.
+- Clinical covariates available in the dataset are limited.
+- The proportional hazards assumption may not hold uniformly across all predictors.
+- Random survival forests improve flexibility but reduce interpretability compared with Cox models.
+- External clinical validation was not performed.
+
 ## Tools
 
 ### Programming Language
