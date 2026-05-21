@@ -1,10 +1,10 @@
 # Clinical Survival Prediction
 
-This project explores statistical and machine learning approaches for clinical survival prediction using time-to-event data in R.
+This project analyses clinical time-to-event data using both classical survival analysis methods and machine learning approaches in R.
 
-The analysis uses the `lung` dataset from the `survival` package and focuses on comparing interpretable statistical survival models with more flexible predictive machine learning methods.
+The analysis uses the `lung` dataset from the `survival` package and compares Kaplan–Meier estimation, Cox proportional hazards models, penalized Cox regression, and random survival forests for modelling patient survival outcomes.
 
-The project was developed as part of a broader interest in predictive modelling, statistical learning, and applied quantitative research using real-world datasets.
+The project focuses on survival prediction, interpretation of risk factors, and evaluation of predictive performance in censored clinical data.
 
 ## Methods
 
